@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ゆるりは、がんばるあなたのための頭ほぐし専門サロンです。完全個室・国家資格保有スタッフが施術。初回限定60分コース4,980円。">
+  <title>ゆるり | 頭ほぐし専門サロン</title>
+
+  <!-- ===== Google Fonts =====
+       見出し: Noto Serif JP（400・600・700）
+       本文:   Noto Sans JP（400・500・700） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ===== スタイルシート ===== -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       ヘッダー
+       ・ロゴ「ゆるり」
+       ・PCナビゲーション（1024px 以上で表示）
+       ・ハンバーガーメニュー（スマホ用）
+       ============================================================ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <!-- ロゴ -->
+      <a href="#" class="header__logo">ゆるり</a>
+
+      <!-- PCナビゲーション -->
+      <nav class="header__nav" id="headerNav" aria-label="メインナビゲーション">
+        <ul class="header__nav-list">
+          <li><a href="#concerns">お悩み</a></li>
+          <li><a href="#menu">メニュー</a></li>
+          <li><a href="#voice">お客様の声</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#" class="header__nav-cta">LINEで予約</a></li>
+        </ul>
+      </nav>
+
+      <!-- ハンバーガーボタン（スマホ専用） -->
+      <button class="hamburger" id="hamburger"
+              aria-label="メニューを開く"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- モバイルメニュー（ハンバーガークリックで開閉） -->
+    <nav class="mobile-menu" id="mobileMenu"
+         aria-label="モバイルナビゲーション"
+         aria-hidden="true">
+      <ul class="mobile-menu__list">
+        <li><a href="#concerns" class="mobile-menu__link">お悩み</a></li>
+        <li><a href="#menu"     class="mobile-menu__link">メニュー・料金</a></li>
+        <li><a href="#voice"    class="mobile-menu__link">お客様の声</a></li>
+        <li><a href="#faq"      class="mobile-menu__link">よくある質問</a></li>
+        <li><a href="#access"   class="mobile-menu__link">アクセス</a></li>
+        <li><a href="#"         class="mobile-menu__link mobile-menu__link--cta">LINEで予約する</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================================
+         セクション 1: ファーストビュー（ヒーローセクション）
+         ・キャッチコピー
+         ・サブコピー
+         ・初回限定価格（目立たせる）
+         ・CTAボタン（LINEで予約）
+         ============================================================ -->
+    <section class="hero" id="hero">
+
+      <!-- 背景画像エリア
+           差し替えファイル: images/hero-bg.jpg
+           → CSS の .hero__bg 内のコメントを参照 -->
+      <div class="hero__bg" role="presentation"></div>
+
+      <!-- テキスト可読性向上のためのオーバーレイ（グラデーション） -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <!-- ヒーローコンテンツ -->
+      <div class="hero__content">
+        <p class="hero__sub">がんばるあなたのための、頭ほぐし専門サロン</p>
+        <h1 class="hero__title">頭が軽くなると、<br>明日が軽くなる。</h1>
+
+        <!-- 初回限定価格バッジ -->
+        <div class="hero__price-box">
+          <span class="hero__price-badge">初回限定</span>
+          <div class="hero__price-inner">
+            <span class="hero__price-menu">60分コース</span>
+            <div class="hero__price-nums">
+              <span class="hero__price-orig">6,600円</span>
+              <span class="hero__price-arrow" aria-hidden="true">→</span>
+              <span class="hero__price-new">4,980<small>円</small></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTAボタン -->
+        <a href="#" class="btn btn--line btn--hero">
+          <span class="btn__label">LINE</span>LINEで予約する
+        </a>
+      </div>
+
+      <!-- スクロール促進インジケーター -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-word">scroll</span>
+        <span class="hero__scroll-bar"></span>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 2: お悩みへの共感
+         ・チェックマーク付きリスト
+         ============================================================ -->
+    <section class="concerns section" id="concerns">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <h2 class="section-title">
+            こんなお悩み<br class="sp-br">ありませんか？
+          </h2>
+        </div>
+
+        <!-- 悩みリスト -->
+        <ul class="concerns__list">
+          <li class="concerns__item fade-in" data-delay="0">
+            <span class="concerns__check" aria-hidden="true">✓</span>
+            パソコンやスマホで、目と頭がいつも重い
+          </li>
+          <li class="concerns__item fade-in" data-delay="100">
+            <span class="concerns__check" aria-hidden="true">✓</span>
+            寝ても疲れがとれない
+          </li>
+          <li class="concerns__item fade-in" data-delay="200">
+            <span class="concerns__check" aria-hidden="true">✓</span>
+            肩こりや首こりがつらい
+          </li>
+          <li class="concerns__item fade-in" data-delay="300">
+            <span class="concerns__check" aria-hidden="true">✓</span>
+            自分だけの時間がほしい
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 3: 解決策
+         ・写真（左）＋テキスト（右）の2カラム（PC）
+         ============================================================ -->
+    <section class="solution section" id="solution">
+      <div class="container">
+        <div class="solution__inner">
+
+          <!-- 施術イメージ写真プレースホルダー
+               差し替えファイル: images/solution.jpg -->
+          <div class="solution__img-wrap fade-in">
+            <div class="img-ph img-ph--rect" aria-label="写真：ヘッドスパ施術イメージ">
+              <span class="img-ph__text">写真：ヘッドスパ施術イメージ</span>
+            </div>
+          </div>
+
+          <!-- テキストエリア -->
+          <div class="solution__text fade-in" data-delay="100">
+            <p class="section-label">FOR YOU</p>
+            <h2 class="section-title section-title--left">
+              その疲れ、「頭のこり」が<br>原因かもしれません。
+            </h2>
+            <p class="solution__body">
+              頭には、首や肩、目につながる筋肉がたくさんあります。<br>
+              ゆるりでは、頭をじっくりほぐして、全身の緊張をやわらげます。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 4: 選ばれる3つの理由
+         ・カード3枚（番号付き）
+         ============================================================ -->
+    <section class="reasons section" id="reasons">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <p class="section-label">WHY CHOOSE US</p>
+          <h2 class="section-title">選ばれる3つの理由</h2>
+        </div>
+
+        <div class="reasons__grid">
+
+          <!-- 理由 01 -->
+          <article class="reason-card fade-in" data-delay="0">
+            <p class="reason-card__num">01</p>
+            <div class="reason-card__icon" aria-hidden="true">🚪</div>
+            <h3 class="reason-card__title">完全個室で、<br>誰にも気をつかわない時間</h3>
+            <p class="reason-card__text">
+              プライベートな空間でゆっくりと。他のお客様の目を気にせず、心から安らいでいただけます。
+            </p>
+          </article>
+
+          <!-- 理由 02 -->
+          <article class="reason-card fade-in" data-delay="150">
+            <p class="reason-card__num">02</p>
+            <div class="reason-card__icon" aria-hidden="true">🏅</div>
+            <h3 class="reason-card__title">国家資格を持つスタッフが、<br>一人ひとりの疲れに合わせて施術</h3>
+            <p class="reason-card__text">
+              あん摩マッサージ指圧師の資格を持つスタッフが、その日の状態に合わせて丁寧にケアします。
+            </p>
+          </article>
+
+          <!-- 理由 03 -->
+          <article class="reason-card fade-in" data-delay="300">
+            <p class="reason-card__num">03</p>
+            <div class="reason-card__icon" aria-hidden="true">🌙</div>
+            <h3 class="reason-card__title">駅から徒歩3分、<br>仕事帰りに寄れる夜21時まで営業</h3>
+            <p class="reason-card__text">
+              平日も夜21時まで営業しています。仕事帰りにそのままお立ち寄りいただけます。
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 5: メニューと料金
+         ============================================================ -->
+    <section class="menu section" id="menu">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <p class="section-label">MENU &amp; PRICE</p>
+          <h2 class="section-title">メニューと料金</h2>
+        </div>
+
+        <div class="menu__list">
+
+          <!-- メニュー 1: お試しコース -->
+          <div class="menu-card fade-in" data-delay="0">
+            <div class="menu-card__left">
+              <h3 class="menu-card__name">お試しヘッドスパ</h3>
+              <span class="menu-card__time">30分</span>
+            </div>
+            <div class="menu-card__right">
+              <span class="menu-card__price">3,800<small>円</small></span>
+            </div>
+          </div>
+
+          <!-- メニュー 2: じっくりコース（人気No.1） -->
+          <div class="menu-card menu-card--popular fade-in" data-delay="100">
+            <span class="menu-card__badge">人気No.1</span>
+            <div class="menu-card__left">
+              <h3 class="menu-card__name">じっくりヘッドスパ</h3>
+              <span class="menu-card__time">60分</span>
+            </div>
+            <div class="menu-card__right">
+              <span class="menu-card__price-orig">6,600円</span>
+              <span class="menu-card__price menu-card__price--accent">4,980<small>円</small></span>
+              <span class="menu-card__price-note">初回限定価格</span>
+            </div>
+          </div>
+
+          <!-- メニュー 3: ヘッド＋肩首コース -->
+          <div class="menu-card fade-in" data-delay="200">
+            <div class="menu-card__left">
+              <h3 class="menu-card__name">ヘッド＋肩首ほぐし</h3>
+              <span class="menu-card__time">90分</span>
+            </div>
+            <div class="menu-card__right">
+              <span class="menu-card__price">9,400<small>円</small></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 予約ボタン -->
+        <div class="menu__cta fade-in">
+          <a href="#" class="btn btn--line btn--lg">
+            <span class="btn__label">LINE</span>LINEで予約する
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 6: お客様の声
+         ・吹き出し風カード
+         ============================================================ -->
+    <section class="voice section" id="voice">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <p class="section-label">CUSTOMER VOICE</p>
+          <h2 class="section-title">お客様の声</h2>
+        </div>
+
+        <div class="voice__grid">
+
+          <!-- 口コミ 1 -->
+          <div class="voice-card fade-in" data-delay="0">
+            <!-- アバター画像プレースホルダー 差し替えファイル: images/avatar-1.jpg -->
+            <div class="voice-card__avatar img-ph img-ph--avatar" aria-label="お客様1">
+              <span class="img-ph__avatar-letter">M</span>
+            </div>
+            <div class="voice-card__body">
+              <div class="voice-card__bubble">
+                <p>「施術中に寝てしまうくらい気持ちよかったです。目の疲れもすっきり！」</p>
+              </div>
+              <p class="voice-card__profile">30代・事務職</p>
+            </div>
+          </div>
+
+          <!-- 口コミ 2 -->
+          <div class="voice-card fade-in" data-delay="150">
+            <!-- アバター画像プレースホルダー 差し替えファイル: images/avatar-2.jpg -->
+            <div class="voice-card__avatar img-ph img-ph--avatar" aria-label="お客様2">
+              <span class="img-ph__avatar-letter">Y</span>
+            </div>
+            <div class="voice-card__body">
+              <div class="voice-card__bubble">
+                <p>「個室なので、気をつかわずにリラックスできました」</p>
+              </div>
+              <p class="voice-card__profile">20代・営業職</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 7: ご予約の流れ
+         ・スマホ: 縦並び
+         ・PC: 横並び（矢印付き）
+         ============================================================ -->
+    <section class="flow section" id="flow">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <p class="section-label">HOW TO BOOK</p>
+          <h2 class="section-title">ご予約の流れ</h2>
+        </div>
+
+        <div class="flow__steps fade-in">
+
+          <!-- ステップ 1 -->
+          <div class="flow-step">
+            <div class="flow-step__circle">①</div>
+            <div class="flow-step__emoji" aria-hidden="true">📱</div>
+            <p class="flow-step__label">LINEで<br>友だち追加</p>
+          </div>
+
+          <div class="flow__arrow" aria-hidden="true"></div>
+
+          <!-- ステップ 2 -->
+          <div class="flow-step">
+            <div class="flow-step__circle">②</div>
+            <div class="flow-step__emoji" aria-hidden="true">💬</div>
+            <p class="flow-step__label">希望の日時を<br>送信</p>
+          </div>
+
+          <div class="flow__arrow" aria-hidden="true"></div>
+
+          <!-- ステップ 3 -->
+          <div class="flow-step">
+            <div class="flow-step__circle">③</div>
+            <div class="flow-step__emoji" aria-hidden="true">✉️</div>
+            <p class="flow-step__label">予約確定の<br>お知らせ</p>
+          </div>
+
+          <div class="flow__arrow" aria-hidden="true"></div>
+
+          <!-- ステップ 4 -->
+          <div class="flow-step">
+            <div class="flow-step__circle">④</div>
+            <div class="flow-step__emoji" aria-hidden="true">🌿</div>
+            <p class="flow-step__label">ご来店</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 8: よくある質問（アコーディオン）
+         ・クリックで開閉、aria-expanded でアクセシブルに
+         ============================================================ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <p class="section-label">FAQ</p>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq__list fade-in">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-item__q"
+                    aria-expanded="false"
+                    aria-controls="faq-a1">
+              <span class="faq-item__q-badge" aria-hidden="true">Q</span>
+              <span class="faq-item__q-text">施術後に髪型は崩れますか？</span>
+              <span class="faq-item__toggle" aria-hidden="true">＋</span>
+            </button>
+            <div class="faq-item__a" id="faq-a1" role="region">
+              <span class="faq-item__a-badge" aria-hidden="true">A</span>
+              <p>パウダールームとヘアアイロンをご用意しています。</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-item__q"
+                    aria-expanded="false"
+                    aria-controls="faq-a2">
+              <span class="faq-item__q-badge" aria-hidden="true">Q</span>
+              <span class="faq-item__q-text">男性も利用できますか？</span>
+              <span class="faq-item__toggle" aria-hidden="true">＋</span>
+            </button>
+            <div class="faq-item__a" id="faq-a2" role="region">
+              <span class="faq-item__a-badge" aria-hidden="true">A</span>
+              <p>申し訳ありませんが、女性専用サロンです。</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 9: アクセス
+         ・地図（左）＋店舗情報（右）の2カラム（PC）
+         ============================================================ -->
+    <section class="access section" id="access">
+      <div class="container">
+
+        <div class="section-head fade-in">
+          <p class="section-label">ACCESS</p>
+          <h2 class="section-title">アクセス</h2>
+        </div>
+
+        <div class="access__inner fade-in">
+
+          <!-- 地図プレースホルダー
+               差し替え方法:
+               ・Googleマップ埋め込みコードをこの div の中に貼り付ける
+               ・または images/map.jpg を用意して <img> タグに変更 -->
+          <div class="access__map">
+            <div class="img-ph img-ph--map" aria-label="地図">
+              <span class="img-ph__text">地図：Googleマップを埋め込む</span>
+            </div>
+          </div>
+
+          <!-- 店舗情報 -->
+          <div class="access__info">
+            <dl class="access__dl">
+              <dt>住所</dt>
+              <dd>〇〇県〇〇市〇〇町1-2-3<br>〇〇ビル 3F</dd>
+              <dt>最寄り駅</dt>
+              <dd>〇〇駅 東口から徒歩3分</dd>
+              <dt>営業時間</dt>
+              <dd>11:00〜21:00</dd>
+              <dt>定休日</dt>
+              <dd>火曜日</dd>
+              <dt>電話</dt>
+              <dd>000-0000-0000</dd>
+            </dl>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         セクション 10: 最後のひと押し（最終CTA）
+         ============================================================ -->
+    <section class="final-cta section" id="cta">
+      <div class="container">
+        <div class="final-cta__inner fade-in">
+          <h2 class="final-cta__title">
+            今日がんばった自分に、<br>ごほうびの60分を。
+          </h2>
+          <p class="final-cta__note">
+            初回限定 60分コース <strong>4,980円</strong>（通常6,600円）
+          </p>
+          <a href="#" class="btn btn--line btn--lg">
+            <span class="btn__label">LINE</span>LINEで予約する
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       フッター
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">ゆるり</p>
+      <p class="footer__copy">&copy; 2024 ゆるり All Rights Reserved.</p>
+      <!-- ポートフォリオ用注記 -->
+      <p class="footer__note">※このサイトはポートフォリオ用の架空のサンプルです</p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       固定LINEボタン
+       ・スマホ: 画面下部に全幅固定
+       ・PC: 右下に小さく固定
+       ============================================================ -->
+  <a href="#"
+     class="fixed-line"
+     id="fixedLine"
+     aria-label="LINEで予約する">
+    <span class="fixed-line__icon" aria-hidden="true">LINE</span>
+    <span class="fixed-line__text">予約する</span>
+  </a>
+
+
+  <!-- ===== JavaScript ===== -->
+  <script src="js/script.js"></script>
+</body>
+</html>
